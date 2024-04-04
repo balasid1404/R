@@ -1,0 +1,9 @@
+install.packages("rvest")
+library(rvest)
+url <- "https://en.wikipedia.org/wiki/Books_published_per_country_per_year"
+page <- read_html(url)
+data<-html_element(page, "table.sortable") %>% html_table() 
+head(data)
+data <- data[c(2,3,4)] # select variables  
+data <- data[-nrow(data),]#romove last row
+write.csv(data,"D:\\data.csv")

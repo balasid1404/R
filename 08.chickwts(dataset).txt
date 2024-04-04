@@ -1,0 +1,19 @@
+data(chickwts)
+
+avg_weight_by_feed<- tapply(chickwts$weight, chickwts$feed, mean) 
+print(avg_weight_by_feed)
+
+median_weight_by_feed<- tapply(chickwts$weight, chickwts$feed, median) 
+max_median_feed <- names(which.max(median_weight_by_feed)) 
+print(max_median_feed)
+
+num_horsebean_chicks<- sum(chickwts$feed == "thorsebean") 
+print(num_horsebean_chicks)
+
+range_soybean_weight <- range(chickwts$weight[chickwts$feed=="soybean"])
+print(range_soybean_weight) # range of weights
+
+barplot(avg_weight_by_feed, 
+           xlab = "Feed Type", 
+           ylab = "Average Weight", 
+           main = "Average Weight ofChicks by Feed Type") 

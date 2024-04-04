@@ -1,0 +1,17 @@
+
+print_pattern <- function(rows) {
+  for (i in 1:rows) {
+    for (j in 1:i) {
+      cat(j, "\t")
+    }
+    cat("\n")
+  }
+}
+rows <- as.integer(readline(prompt = "Enter the number of rows for the pattern:"))
+
+if (!is.na(rows) && rows > 0) {
+  print_pattern(rows)
+  
+} else {
+  print("Invalid input. Please enter a positive integer.")
+}

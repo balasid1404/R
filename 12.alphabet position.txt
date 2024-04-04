@@ -1,0 +1,37 @@
+#Function to find the position of an alphabet in the English letters 
+find_alphabet_position <- function(alphabet) {
+
+# To convert alphabet to lowercase to handle case-insensitivity 
+alphabet <- tolower(alphabet)
+
+#defining the English alphabet
+
+english_alphabet <- letters
+
+#Finding the position of the alphabet
+
+position <- which(english_alphabet == alphabet)
+
+#If alphabet is found, return its position, otherwise return a message 
+if (length(position) > 0) {
+
+return(position)
+
+} else {
+
+return(paste("Alphabet", alphabet, "not found in English letters."))
+
+}
+
+}
+
+# to get input from the user
+
+alphabet_input <- readline(prompt = "Enter an alphabet: ")
+
+#Calling the function to find the position of the input alphabet 
+position <-find_alphabet_position(alphabet_input)
+
+# Print the position
+
+print(position)

@@ -1,0 +1,13 @@
+data <- read.csv("D://data.csv")
+menu_items_per_category<- table(data$Category) 
+print(menu_items_per_category)
+
+highest_calorie_item <- data[which.max(data$Calories), ]
+print(highest_calorie_item)
+
+average_calories_by_category<- tapply(data$Calories, data$Category, mean)
+highest_avg_calorie_category<- names(which.max(average_calories_by_category)) 
+print(highest_avg_calorie_category)
+
+revenue_by_category <- tapply(data$Price, data$Category, sum)
+print(revenue_by_category)

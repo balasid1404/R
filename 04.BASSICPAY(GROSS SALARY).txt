@@ -1,0 +1,19 @@
+
+data<- data.frame(
+  EMP_ID= c(1001, 1002, 1003, 1004, 1005),
+  BASIC_PAY = c(55000, 24000, 120000, 46000, 23000),
+  DA = c("3%", "5%", "3%", "7%", "4%"),
+  HRA= c("8%", "8%", "9%", "5%", "7%"), 
+  GROSS_SALARY = c(61050, 27120, NA, 45520, 25530)
+)
+
+gross_salary_range<- range(data$GROSS_SALARY, na.rm = TRUE)
+print(gross_salary_range)
+
+average_basic_pay<- sum(data$BASIC_PAY) / length(data$BASIC_PAY)
+print(average_basic_pay)
+
+emp_id_missing_salary <- data$EMP_ID[is.na(data$GROSS_SALARY)]
+print(emp_id_missing_salary)
+
+pie(data$BASIC_PAY,labels = data$EMP_ID,col= rainbow(length(data$BASIC_PAY)))

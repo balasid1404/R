@@ -1,0 +1,12 @@
+random_numbers <- sample(1:100,10)
+# To identify even numbers in the vector 
+even_numbers <- random_numbers[random_numbers %% 2==0]
+# To calculate the sum of even numbers 
+sum_even <- sum(even_numbers)
+# Displaying the results 
+print("Generated Random Numbers:") 
+print(random_numbers) 
+print("Even Numbers:") 
+print(even_numbers) 
+print("Sum of Even Numbers:") 
+print(sum_even)

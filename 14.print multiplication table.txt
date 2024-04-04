@@ -1,0 +1,19 @@
+
+print_multiplication_table <- function(number) { 
+  cat("Multiplication Table of", number, ":\n") 
+for (i in 1:10) {
+
+cat(number, "x", i, "=", number * i, "\n")
+
+}
+
+}
+
+number <- as.numeric(readline(prompt = "Enter a number: "))
+
+
+if (!is.na(number)) { 
+print_multiplication_table(number) }
+else {
+print("Invalid input. Please enter a valid number.") 
+}

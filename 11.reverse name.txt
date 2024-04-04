@@ -1,0 +1,9 @@
+# Prompt to enter friend names separated by commas 
+input_names <- readline(prompt = "Enter your friend's names separated by commas: ") 
+# Splitting the input string into a vector of names  
+friend_names <- strsplit(input_names,",")[[1]] 
+# Printing the names in reverse order 
+print(rev(friend_names)) 
+# Sorting the vector of names 
+sorted_names <- sort(friend_names)
+print(sorted_names)

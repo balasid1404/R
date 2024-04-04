@@ -1,0 +1,18 @@
+# Creating a data frame with height, weight, and age 
+data <- data.frame( 
+height = c(170, 165, 180, 175), 
+weight = c(70, 65, 80, 75), 
+age = c(25, 30, 28, 35)
+
+)
+
+# Printing the data frame
+ print("Data Frame:")
+ print(data)
+
+# Converting the data frame into a matrix 
+matrix_data <- as.matrix(data)
+
+#Print the matrix
+ print("Matrix:") 
+ print(matrix_data)

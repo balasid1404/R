@@ -1,0 +1,8 @@
+ages<-c(25, 30, 35, 40, 45)
+# Finding the mean age mean 
+mean_age <- mean(ages)
+# Finding the median age  
+median_age <- median(ages)
+# Displaying the mean and median age 
+print(paste("Mean age:" , mean_age))  
+print(paste("Median age:", median_age))

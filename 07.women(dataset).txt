@@ -1,0 +1,19 @@
+print(women)
+
+average_height<- mean(women$height) 
+print(average_height)
+
+median_weight <- median(women$weight)
+print(median_weight)
+
+weight_range<- range(women$weight) 
+print(weight_range)
+
+tallest_height<- max(women$height) 
+print(tallest_height)
+
+plot(women$height, women$weight, 
+     xlab = "Height", 
+     ylab = "Weight", 
+     main = "Relationship between Height and Weight", 
+     col="blue", pch=16)

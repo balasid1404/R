@@ -1,0 +1,14 @@
+# Reading the ToothGrowth dataset 
+data <- ToothGrowth
+
+# Adding a new column named "condition" 
+data$condition <- ifelse(data$len < 10, "All Well", "Caution")
+
+#To Print the updated dataset 
+print(data)
+
+# Finding the frequency of each condition 
+frequency <-table(data$condition)
+
+# Printing the frequency of each condition 
+print(frequency)
